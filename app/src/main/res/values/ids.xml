@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="imageView" type="id" />
+    <item name="editTextTextPersonName" type="id" />
+    <item name="editTextTextPersonName2" type="id" />
+    <item name="textView3" type="id" />
+    <item name="radioButton" type="id" />
+    <item name="radioButton2" type="id" />
+    <item name="editTextDate" type="id" />
+    <item name="textView4" type="id" />
+    <item name="textView5" type="id" />
+    <item name="radioButton3" type="id" />
+    <item name="radioButton4" type="id" />
+    <item name="textView6" type="id" />
+    <item name="toggleButton" type="id" />
+    <item name="editTextTextMultiLine2" type="id" />
+    <item name="save1" type="id" />
+    <item name="radioButton5" type="id" />
+    <item name="radioButton6" type="id" />
+    <item name="save2" type="id" />
+    <item name="textView2" type="id" />
+    <item name="editTextTextPersonName7" type="id" />
+    <item name="editTextTextPersonName6" type="id" />
+    <item name="editTextTextPersonName5" type="id" />
+    <item name="editTextTextPersonName4" type="id" />
+</resources>
