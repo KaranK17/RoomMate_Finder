@@ -156,8 +156,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="25dp"
         android:layout_marginTop="330dp"
-        android:text="Yes"
         android:buttonTint="#0D47A1"
+        android:text="Yes"
         android:textColor="@color/white"
         tools:layout_editor_absoluteX="6dp"
         tools:layout_editor_absoluteY="375dp" />
@@ -192,8 +192,8 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="155dp"
         android:layout_marginTop="430dp"
-        android:text="No"
         android:buttonTint="#0D47A1"
+        android:text="No"
         android:textColor="@color/white"
         tools:layout_editor_absoluteX="146dp"
         tools:layout_editor_absoluteY="375dp" />

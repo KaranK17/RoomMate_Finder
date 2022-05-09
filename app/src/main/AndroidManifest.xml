@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Application1">
         <activity
+            android:name=".activity_otp_verify"
+            android:exported="false" />
+        <activity
+            android:name=".activity_otp_send"
+            android:exported="false" />
+        <activity
             android:name=".scrollview"
             android:exported="false" />
         <activity
