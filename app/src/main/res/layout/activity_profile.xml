@@ -172,7 +172,7 @@
         tools:layout_editor_absoluteY="403dp" />
 
     <RadioButton
-        android:id="@+id/proffesional"
+        android:id="@+id/professional"
         android:layout_width="130dp"
         android:layout_height="43dp"
         android:layout_marginLeft="125dp"

@@ -84,7 +84,7 @@ public class signup extends AppCompatActivity {
 
 
     public void opensend() {
-        Intent intent1 = new Intent(this, activity_otp_send.class);
+        Intent intent1 = new Intent(this, Profile.class);
         startActivity(intent1);
         finish();
     }
