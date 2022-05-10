@@ -89,6 +89,9 @@ public class LifeStyle extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             Toast.makeText(LifeStyle.this, "Data Added", Toast.LENGTH_SHORT).show();
 
+                            Intent intent1 = new Intent(LifeStyle.this, LifePref2.class);
+                            startActivity(intent1);
+
                         }
                     }
                 });
