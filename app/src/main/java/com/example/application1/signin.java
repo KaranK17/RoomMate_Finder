@@ -19,13 +19,22 @@ import com.google.android.material.button.MaterialButton;
 
 
 public class signin extends AppCompatActivity {
-
-
+    private MaterialButton Login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signin);
+
+        Login = (MaterialButton) findViewById(R.id.Login);
+        Login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openHomepage();
+            }
+
+
+        });
       //  { openResetpass(); }
 
 
@@ -97,6 +106,11 @@ public class signin extends AppCompatActivity {
    // }
     public void openResetpass() {
         Intent intent1 = new Intent(this, activity_otp_send.class);
+        startActivity(intent1);
+    }
+
+    public void openHomepage() {
+        Intent intent1 = new Intent(this, Homepage.class);
         startActivity(intent1);
     }
 }
