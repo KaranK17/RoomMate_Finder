@@ -37,7 +37,7 @@ public class Profile extends AppCompatActivity {
         bio = findViewById(R.id.bio);
         firstname = findViewById(R.id.firstname);
         lastname = findViewById(R.id.lastname);
-        date = findViewById(R.id.editTextDate);
+        date = findViewById(R.id.Date);
         male= findViewById(R.id.male);
         female= findViewById(R.id.female);
         prof= findViewById(R.id.professional);
@@ -62,10 +62,10 @@ public class Profile extends AppCompatActivity {
     }
     public void openhousepref() {
         HashMap<String,Object> Profile= new HashMap<>();
-        Profile.put("firstname",firstname.getText());
-        Profile.put("lastname",lastname.getText());
-        Profile.put("bio",bio.getText());
-        Profile.put("date",date.getText());
+        Profile.put("firstname",firstname.getText().toString());
+        Profile.put("lastname",lastname.getText().toString());
+        Profile.put("bio",bio.getText().toString());
+        Profile.put("date",date.getText().toString());
 
         if(male.isSelected()){
             Profile.put("gender","Male");
@@ -84,7 +84,7 @@ public class Profile extends AppCompatActivity {
             Profile.put("isfinding","yes");
         }
 
-        db.collection("Profile").document(auth.getCurrentUser().getUid()).set(Profile).addOnCompleteListener(new OnCompleteListener<Void>() {
+        db.collection("UserProfile").document(auth.getCurrentUser().getUid()).set(Profile).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if(task.isSuccessful()){
