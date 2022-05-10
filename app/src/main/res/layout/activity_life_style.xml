@@ -89,7 +89,9 @@
         android:textStyle="bold"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="213dp" />
-
+<RadioGroup
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
     <RadioButton
         android:id="@+id/radioButton7"
         android:layout_width="111dp"
@@ -107,13 +109,13 @@
         android:layout_width="119dp"
         android:layout_height="27dp"
         android:layout_marginLeft="155dp"
-        android:layout_marginTop="155dp"
+        android:layout_marginTop="-25dp"
         android:text="Non Veg"
         android:buttonTint="#0D47A1"
         android:textColor="@color/white"
         tools:layout_editor_absoluteX="146dp"
         tools:layout_editor_absoluteY="170dp" />
-
+</RadioGroup>
     <RadioButton
         android:id="@+id/radioButton9"
         android:layout_width="wrap_content"

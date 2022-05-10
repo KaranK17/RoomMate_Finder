@@ -101,7 +101,9 @@
         android:textStyle="bold"
         tools:layout_editor_absoluteX="57dp"
         tools:layout_editor_absoluteY="521dp" />
-
+<RadioGroup
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
     <RadioButton
         android:id="@+id/radioButton5"
         android:layout_width="132dp"
@@ -120,7 +122,7 @@
         android:layout_width="160dp"
         android:layout_height="48dp"
         android:layout_marginLeft="25dp"
-        android:layout_marginTop="480dp"
+        android:layout_marginTop="-45dp"
         android:background="#30ff"
         android:text="Studio"
         android:textColor="@color/white"
@@ -128,7 +130,7 @@
         android:textStyle="bold"
         tools:layout_editor_absoluteX="216dp"
         tools:layout_editor_absoluteY="339dp" />
-
+    </RadioGroup>
     <com.google.android.material.button.MaterialButton
         android:id="@+id/save2"
         android:layout_width="316dp"
