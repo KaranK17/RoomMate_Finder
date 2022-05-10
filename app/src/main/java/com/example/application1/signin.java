@@ -96,7 +96,7 @@ public class signin extends AppCompatActivity {
    //     startActivity(intent1);
    // }
     public void openResetpass() {
-        Intent intent1 = new Intent(this, activity_otp_send.class);
+        Intent intent1 = new Intent(this, HousePref.class);
         startActivity(intent1);
     }
 }

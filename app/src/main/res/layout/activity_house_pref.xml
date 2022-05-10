@@ -24,14 +24,14 @@
         tools:layout_editor_absoluteY="516dp" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/Location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="25dp"
         android:layout_marginTop="150dp"
         android:drawableLeft="@drawable/ic_baseline_pin_drop_24"
         android:ems="10"
-        android:hint="  Pick A Location"
+        android:hint="  State A Location"
         android:inputType="textPersonName"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
@@ -40,7 +40,7 @@
         tools:layout_editor_absoluteY="616dp" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName5"
+        android:id="@+id/Miles"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="25dp"
@@ -56,33 +56,33 @@
         tools:layout_editor_absoluteY="594dp" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName6"
+        android:id="@+id/MinBud"
         android:layout_width="159dp"
         android:layout_height="50dp"
         android:layout_marginLeft="25dp"
         android:layout_marginTop="340dp"
         android:drawableLeft="@drawable/ic_baseline_currency_rupee_24"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="    Min Budget"
-        android:textColorHint="@color/white"
+        android:inputType="textPersonName"
         android:textColor="@color/white"
+        android:textColorHint="@color/white"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="457dp" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName7"
+        android:id="@+id/MaxBud"
         android:layout_width="179dp"
         android:layout_height="50dp"
         android:layout_marginLeft="195dp"
         android:layout_marginTop="340dp"
         android:drawableLeft="@drawable/ic_baseline_currency_rupee_24"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="  Max Budget"
-        android:textColorHint="@color/white"
+        android:inputType="textPersonName"
         android:textColor="@color/white"
+        android:textColorHint="@color/white"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="216dp"
         tools:layout_editor_absoluteY="499dp" />
@@ -103,20 +103,20 @@
         tools:layout_editor_absoluteY="521dp" />
 
     <RadioButton
-        android:id="@+id/radioButton5"
+        android:id="@+id/priv"
         android:layout_width="132dp"
         android:layout_height="47dp"
         android:layout_marginLeft="195dp"
         android:layout_marginTop="480dp"
-        android:text="Private"
-        android:textStyle="bold"
         android:background="#30ff"
+        android:text="Private"
         android:textColor="@color/white"
+        android:textStyle="bold"
         tools:layout_editor_absoluteX="-11dp"
         tools:layout_editor_absoluteY="316dp" />
 
     <RadioButton
-        android:id="@+id/radioButton6"
+        android:id="@+id/studio"
         android:layout_width="160dp"
         android:layout_height="48dp"
         android:layout_marginLeft="25dp"
