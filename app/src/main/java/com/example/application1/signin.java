@@ -37,6 +37,7 @@ public class signin extends AppCompatActivity {
         Resetpass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 openResetpass();
             }
 
@@ -95,7 +96,7 @@ public class signin extends AppCompatActivity {
    //     startActivity(intent1);
    // }
     public void openResetpass() {
-        Intent intent1 = new Intent(this, forgotpass.class);
+        Intent intent1 = new Intent(this, activity_otp_send.class);
         startActivity(intent1);
     }
 }

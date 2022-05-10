@@ -19,7 +19,6 @@ import com.google.firebase.auth.FirebaseAuth;
 
 import java.text.BreakIterator;
 public class signup extends AppCompatActivity {
-    private MaterialButton Register;
     private Object Utils;
     private FirebaseAuth auth;
     private boolean isNetworkConnected() {
@@ -37,10 +36,12 @@ public class signup extends AppCompatActivity {
         TextView inputConfirmPassword = findViewById(R.id.conpass);
         String emailpattern = "^(.+)@(\\S+) $";
 
-        Register = findViewById(R.id.Register);
-        Register.setOnClickListener(new View.OnClickListener() {
+        MaterialButton Register = (MaterialButton) findViewById(R.id.Register) ;
+        Register =  (MaterialButton) findViewById(R.id.Register);
+        Register.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onClick(View view) { openotpsend();
+            public void onClick(View view) {
+                opensend();
 
 
 
@@ -53,9 +54,9 @@ public class signup extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Enter email address!", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if (!email.matches(emailpattern)) {
-                   Toast.makeText(getApplicationContext(), "Invalid email address!", Toast.LENGTH_SHORT).show();
-                }
+               // if (!!email.matches(emailpattern)) {
+                 //  Toast.makeText(getApplicationContext(), "Invalid email address!", Toast.LENGTH_SHORT).show();
+                //}
 
                 if (TextUtils.isEmpty(password)) {
                     Toast.makeText(getApplicationContext(), "Enter password!", Toast.LENGTH_SHORT).show();
@@ -82,9 +83,10 @@ public class signup extends AppCompatActivity {
 
 
 
-    public void openotpsend() {
+    public void opensend() {
         Intent intent1 = new Intent(this, activity_otp_send.class);
         startActivity(intent1);
+        finish();
     }
 
     public void signup(String email,String pass){
@@ -93,7 +95,7 @@ public class signup extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     Toast.makeText(signup.this, "Signup Success", Toast.LENGTH_SHORT).show();
-                    openotpsend();
+                    opensend();
                 }
             }
         });

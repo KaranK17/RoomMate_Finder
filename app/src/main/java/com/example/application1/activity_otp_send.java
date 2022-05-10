@@ -32,9 +32,11 @@ public class activity_otp_send extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         binding = activity_otp_send.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+        setContentView(R.layout.activity_otp_send);
         mAuth = FirebaseAuth.getInstance();
+        setContentView(binding.getRoot());
 
         binding.MaterialbuttonSave6.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,7 +84,7 @@ public class activity_otp_send extends Activity {
                                    @NonNull PhoneAuthProvider.ForceResendingToken token) {
                 binding.MaterialbuttonSave6.setVisibility(View.VISIBLE);
                 Toast.makeText(activity_otp_send.this, "OTP is successfully send.", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(activity_otp_send.this, activity_otp_verify .class);
+                Intent intent = new Intent(activity_otp_send.this, activity_otp_verify.class);
                 intent.putExtra("phone", binding.etPhone.getText().toString().trim());
                 intent.putExtra("verificationId", verificationId);
                 startActivity(intent);

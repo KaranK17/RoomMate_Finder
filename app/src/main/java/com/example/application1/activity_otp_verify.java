@@ -34,6 +34,7 @@ public class activity_otp_verify extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_otp_verify);
         binding =activity_otp_verify .inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
