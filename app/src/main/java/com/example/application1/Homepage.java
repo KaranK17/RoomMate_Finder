@@ -41,6 +41,7 @@ public class Homepage extends AppCompatActivity
     private TextView textView3;
     private TextView textView4;
     private TextView textView5;
+    private TextView textView6;
 
     private Integer i = 0;
     private Button btnNxt;
@@ -61,6 +62,7 @@ public class Homepage extends AppCompatActivity
         textView3 = findViewById(R.id.tvValueG);
         textView4= findViewById(R.id.tvValueP);
         textView5 = findViewById(R.id.tvValueD);
+        textView6 = findViewById(R.id.tvValuePn);
         btnNxt = findViewById(R.id.Refresh);
         db=FirebaseFirestore.getInstance();
         btnNxt.setOnClickListener(new View.OnClickListener() {
@@ -71,12 +73,13 @@ public class Homepage extends AppCompatActivity
                 {
                     i = 0;
                 }
-                textView.setText(details.get(i).firstname);
+                textView.setText("Name: " + details.get(i).firstname);
                 textView1.setText(details.get(i).lastname);
-                textView2.setText(details.get(i).bio);
-                textView3.setText(details.get(i).gender);
-                textView4.setText(details.get(i).profession);
-                textView5.setText(details.get(i).date);
+                textView2.setText("Date: "+details.get(i).date);
+                textView3.setText("Gender: "+details.get(i).gender);
+                textView4.setText("Profession: "+details.get(i).profession);
+                textView5.setText("Bio: "+details.get(i).bio);
+                textView6.setText("Phone: "+details.get(i).phone);
             }
         });
         db.collection("UserProfile")
@@ -90,22 +93,23 @@ public class Homepage extends AppCompatActivity
                                 User u = new User(
                                         document.getString("firstname"),
                                         document.getString("lastname"),
-                                        document.getString("bio"),
+                                        document.getString("date"),
                                         document.getString("gender"),
                                         document.getString("profession"),
-                                        document.getString("date")
-
-
+                                        document.getString("bio"),
+                                        document.getString("phone")
                                 );
 
                                 details.add(u);
                             }
-                            textView.setText(details.get(i).firstname);
+                            textView.setText("Name: " + details.get(i).firstname);
                             textView1.setText(details.get(i).lastname);
-                            textView2.setText(details.get(i).bio);
-                            textView3.setText(details.get(i).gender);
-                            textView4.setText(details.get(i).profession);
-                            textView5.setText(details.get(i).date);
+                            textView2.setText("Date: "+details.get(i).date);
+                            textView3.setText("Gender: "+details.get(i).gender);
+                            textView4.setText("Profession: "+details.get(i).profession);
+                            textView5.setText("Bio: "+details.get(i).bio);
+                            textView6.setText("Phone: "+details.get(i).phone);
+
                         } else {
                            // Log.w(TAG, "Error getting documents.", task.getException());
 
@@ -122,15 +126,17 @@ public class Homepage extends AppCompatActivity
 
 class User{
 
-    String firstname,lastname,bio,gender,profession,date;
-    User(String firstname,String lastname,String bio,String gender, String profession, String date)
+    String firstname,lastname,bio,gender,profession,date, phone;
+    User(String firstname,String lastname, String date,String gender, String profession,String bio,String phone)
     {
         this.firstname = firstname;
         this.lastname = lastname;
-        this.bio = bio;
         this.gender= gender;
         this.profession = profession;
         this.date = date;
+        this.bio = bio;
+        this.phone = phone;
+
 
     }
 }

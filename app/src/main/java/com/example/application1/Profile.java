@@ -23,7 +23,7 @@ import java.util.HashMap;
 
 public class Profile extends AppCompatActivity {
     private MaterialButton save1;
-    private EditText bio, firstname,lastname, date;
+    private EditText bio, firstname,lastname, date, phone;
     private RadioButton male,female,prof,student;
     private ToggleButton yesno;
     private FirebaseAuth auth;
@@ -43,6 +43,7 @@ public class Profile extends AppCompatActivity {
         prof= findViewById(R.id.professional);
         student= findViewById(R.id.student);
         yesno= findViewById(R.id.toggleButton);
+        phone = findViewById(R.id.phone);
 
         auth=FirebaseAuth.getInstance();
         db=FirebaseFirestore.getInstance();
@@ -66,17 +67,22 @@ public class Profile extends AppCompatActivity {
         Profile.put("lastname",lastname.getText().toString());
         Profile.put("bio",bio.getText().toString());
         Profile.put("date",date.getText().toString());
+        Profile.put("phone", phone.getText().toString());
 
-        if(male.isSelected()){
+        if(male.isChecked()){
+
             Profile.put("gender","Male");
         }
         else{
+
             Profile.put("gender","Female");
         }
-        if(student.isSelected()){
+        if(student.isChecked()){
+
             Profile.put("profession","Student");
         }
         else{
+
             Profile.put("profession","Professional");
         }
 

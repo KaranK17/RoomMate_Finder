@@ -3,6 +3,7 @@ package com.example.application1;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioButton;
@@ -85,6 +86,8 @@ public class LifePref2 extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             Toast.makeText(LifePref2.this, "Data Added", Toast.LENGTH_SHORT).show();
 
+                            Intent intent1 = new Intent(LifePref2.this, Homepage.class);
+                            startActivity(intent1);
 
                         }
                     }
